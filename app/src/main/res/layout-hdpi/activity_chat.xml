@@ -5,31 +5,69 @@
     android:layout_width="match_parent"
     android:background="@color/blue"
     android:layout_height="match_parent"
-    android:padding="10dp"
     tools:context=".ChatActivity">
 
-    <androidx.cardview.widget.CardView
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="338dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/logoicon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="250dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="cursive"
+            android:text="Type app"
+            android:textColor="@color/orange"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <FrameLayout
         android:id="@+id/cardView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:elevation="10dp"
-        app:cardCornerRadius="20dp"
+        android:layout_height="700dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="368dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:background="@color/white"
             android:id="@+id/Recyclerview"
-            tools:listitem="@layout/chatrecyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp" />
+            android:backgroundTint="@color/blue"
+            android:layout_margin="10dp"
+            android:contextClickable="true"
+            android:background="@color/orange"
+            tools:listitem="@layout/chatrecyclerview" />
 
-    </androidx.cardview.widget.CardView>
-
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

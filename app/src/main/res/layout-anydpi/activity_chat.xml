@@ -15,10 +15,10 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019" />
+        app:layout_constraintVertical_bias="0.001" />
 
     <TextView
         android:id="@+id/Nickname"
@@ -26,17 +26,16 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
         android:fontFamily="cursive"
-        android:padding="10dp"
+        android:textAlignment="center"
+        android:padding="5dp"
         android:text="Nickname"
         android:textColor="@color/orange"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toEndOf="@+id/profileview"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileview" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView6"
@@ -48,15 +47,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584">
+        app:layout_constraintVertical_bias="0.641">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Recyclerview2"
-            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem=""
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            tools:listitem="" />
 
     </androidx.cardview.widget.CardView>
 
@@ -65,40 +64,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingHorizontal="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976">
+        app:layout_constraintVertical_bias="0.993">
 
 
         <EditText
+            android:layout_marginStart="10dp"
             android:id="@+id/messageEditText"
-            android:layout_height="wrap_content"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_weight="1"
             android:background="@drawable/edit_text_bg"
-            android:hint="Say something..."
-            android:textColor="@color/orange"
             android:fontFamily="cursive"
+            android:hint="Say something..."
             android:inputType="text"
-            android:padding="20dp"
-            android:layout_width="0dp"
-            />
+            android:padding="10dp"
+            android:textColor="@color/orange" />
 
         <ImageView
             android:id="@+id/sendButton"
             android:layout_width="60dp"
-            android:layout_height="59dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:clickable="true"
             android:enabled="false"
             android:focusable="true"
-            android:src="@drawable/outline_send_gray_24" />
+            android:src="@drawable/send" />
 
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
