@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.typeapp.ChatActivity
 import com.example.typeapp.ChatActivity2
 import com.example.typeapp.Models.User
@@ -35,6 +36,7 @@ class UserAdopter(
         holder.name.text = currentUser.name
         Glide.with(holder.itemView)
             .load(currentUser.imageurl)
+            .apply(RequestOptions.circleCropTransform())
             .into(holder.Image)
         holder.itemView.setOnClickListener {
 
